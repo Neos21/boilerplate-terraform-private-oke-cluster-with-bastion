@@ -1,0 +1,93 @@
+/* 変数値 */
+
+
+// OCI 全般・API Key 設定
+// ====================================================================================================
+
+// リージョン (ex. us-ashburn-1)
+region = "us-ashburn-1"
+
+// テナンシの OCID
+tenancy_ocid = "ocid1.tenancy.oc1..XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+
+// Terraform を実行するユーザの OCID (Resource Manager 実行時は不要)
+user_ocid = "ocid1.user.oc1..XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+
+// Terraform を実行するユーザの API Key のフィンガープリント (Resource Manager 実行時は不要)
+fingerprint = "XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX"
+
+// Terraform を実行するユーザの API Key 秘密鍵のフルパス (Resource Manager 実行時は不要)
+private_key_path = "/PATH/TO/API-KEY.pem"
+
+// コンパートメントの OCID
+compartment_ocid = "ocid1.compartment.oc1..XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+
+
+// OKE 全体
+// ====================================================================================================
+
+// OKE クラスタを構成するリソース名称の接頭辞
+oke_cluster_name_prefix = "example"
+
+// 使用する Kubernetes のバージョン (ex. v1.12.7)
+oke_kubernetes_version = "v1.12.7"
+
+
+// OKE Node Pool
+// ====================================================================================================
+
+// Node Pool のシェイプ (複数指定した場合はその数だけ Node Pool が作成される)・List の数は oke_node_pool_quantities_per_subnet と合わせる
+oke_node_pool_node_shapes = [ "VM.Standard1.1" ]
+
+// Node Pool 内の Worker Node で使用する Kubernetes のバージョン
+oke_node_pool_kubernetes_version = "v1.12.7"
+
+// Node Pool 内の Worker Node で使用するイメージ名
+oke_node_pool_image_name = "Oracle-Linux-7.6"
+
+// 1つの Subnet に配置する Node 数の指定・List の数は oke_node_pool_node_shapes と合わせる
+oke_node_pool_quantities_per_subnet = [ 1 ]
+
+// Worker Node への SSH 接続用の公開鍵
+oke_node_pool_ssh_public_key = "ssh-rsa XXXXXXXXXX"
+
+
+// VCN
+// ====================================================================================================
+
+// OKE クラスタを構成する VCN の DNS Label 名・ハイフンを許容しないので注意
+vcn_dns_label = "okevcn"
+
+// Load Balancer AD1 の Subnet の DNS ラベル名・ハイフンを許容しないので注意 (ex. loadbalancer1)
+subnet_dns_label_load_balancer_ad1 = "loadbalancer1"
+
+// Load Balancer AD2 の Subnet の DNS ラベル名・ハイフンを許容しないので注意 (ex. loadbalancer2)
+subnet_dns_label_load_balancer_ad2 = "loadbalancer2"
+
+// Worker Node AD1 の Subnet の DNS ラベル名・ハイフンを許容しないので注意 (ex. workernode1)
+subnet_dns_label_worker_node_ad1 = "workernode1"
+
+// Worker Node AD2 の Subnet の DNS ラベル名・ハイフンを許容しないので注意 (ex. workernode2)
+subnet_dns_label_worker_node_ad2 = "workernode2"
+
+// Worker Node AD3 の Subnet の DNS ラベル名・ハイフンを許容しないので注意 (ex. workernode3)
+subnet_dns_label_worker_node_ad3 = "workernode3"
+
+// 踏み台サーバの Subnet の DNS ラベル名・ハイフンを許容しないので注意 (ex. bastion)
+subnet_dns_label_bastion = "bastion"
+
+
+// Instance
+// ====================================================================================================
+
+// Instanc イメージの OCID マップ
+// instance_image_ocids = ""
+
+// Instance のシェイプ
+instance_shape = "VM.Standard1.1"
+
+// Instance への SSH 接続用の公開鍵
+instance_ssh_public_key = "ssh-rsa XXXXXXXXXX"
+
+// 踏み台サーバ AD1 のホスト名 (ex. bastion1)
+instance_hostname_label_bastion_ad1 = "bastion1"
