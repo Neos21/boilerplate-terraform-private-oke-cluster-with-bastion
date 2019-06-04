@@ -34,6 +34,8 @@ OCI Resource Manager で実行する際は、OCI Provider にユーザ情報を�
 - `variables.tf`
     - `variable "user_ocid"`・`variable "fingerprint"`・`variable "private_key_path"` の3つの宣言をコメントアウトする
 
+※ OCI Resource Manager で OCI Provider にユーザ情報を指定していると、`provider.oci: user credentials user_ocid, fingerprint, private_key_path should be removed from the configuration` というエラーが発生してしまう。
+
 
 ## Author
 
