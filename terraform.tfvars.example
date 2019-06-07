@@ -80,7 +80,7 @@ subnet_dns_label_bastion = "bastion"
 // Instance
 // ====================================================================================================
 
-// Instanc イメージの OCID マップ
+// Instance イメージの OCID マップ
 // instance_image_ocids = ""
 
 // Instance のシェイプ

@@ -116,7 +116,7 @@ variable "subnet_dns_label_bastion" {
 // ====================================================================================================
 
 variable "instance_image_ocids" {
-  description = "Instanc イメージの OCID マップ"
+  description = "Instance イメージの OCID マップ"
   type        = "map"
   default     = {
     // - イメージ定義のベスト・プラクティス : https://www.terraform.io/docs/providers/oci/guides/best_practices.html#referencing-images
