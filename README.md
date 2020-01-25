@@ -39,7 +39,7 @@ OCI Resource Manager で実行する際は、OCI Provider にユーザ情報を�
 
 ## Author
 
-[Neo](http://neo.s21.xrea.com/) ([@Neos21](https://twitter.com/Neos21))
+[Neo](http://neo.s21.xrea.com/)
 
 - [GitHub - terraform-private-oke-cluster-with-bastion](https://github.com/Neos21/terraform-private-oke-cluster-with-bastion)
 
